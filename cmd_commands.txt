@@ -1,0 +1,11 @@
+ npm init -y
+npm i express cors dotenv
+npm i -D typescript tsc ts-node-dev @types/express @types/node @types/cors
+tsc --init
+npm run dev
+npm i mongoose
+npm i multer cloudinary
+npm i multer -D @types/multer
+
+
+
