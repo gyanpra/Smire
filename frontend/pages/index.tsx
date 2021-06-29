@@ -46,8 +46,10 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-center">
-        <h2 className="my-4 text-3xl font-medium italic">Send a file</h2>
+      <div className="flex flex-col items-center justify-center hover:bg-blue-400 hover:shadow-lg hover:border-transparent rounded-xl transition duration-500 ease-out-in transform hover:-translate-y-1 hover:-translate-x-1 hover:scale-110">
+        <h2 className="my-4 text-3xl font-medium italic hover:text-red-500 hover:text-4xl hover:underline ">
+          Send a file
+        </h2>
         <div className="flex flex-col items-center justify-center bg-yellow-500 shadow-xl w-96 rounded-xl">
           {!downloadPageLink && <Dropdown setFile={setFile} />}
           {file && (
@@ -62,7 +64,7 @@ export default function Home() {
 
           {!downloadPageLink && file && (
             <button
-              className="p-2 my-5 bg-gray-900 rounded-md w-44 focus:outline-none"
+              className="p-2 my-5 bg-gray-900 rounded-md w-44 focus:outline-none "
               onClick={handleUpload}
             >
               {uploadState}
@@ -70,11 +72,11 @@ export default function Home() {
           )}
 
           {downloadPageLink && (
-            <div className="p-2 text-center">
+            <div className="p-2 text-center transition duration-500 ease-out-in transform hover:-translate-y-1 hover:scale-90">
               <Download downloadPageLink={downloadPageLink} />
               <EmailForm id={id} />
               <button
-                className="button p-1 my-3 bg-gray-900 rounded-md w-30 focus:outline-none"
+                className="button p-1 my-3 transition duration-500 ease-in-out  bg-gray-900 rounded-md w-30 focus:outline-none hover:bg-red-600 transform hover:-translate-y-1 hover:scale-90 hover:shadow-lg hover:border-transparent rounded-xl"
                 onClick={resetComponent}
               >
                 Upload New File
