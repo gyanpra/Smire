@@ -1,11 +1,22 @@
- npm init -y
+//In backeend
+
+npm init -y
 npm i express cors dotenv
 npm i -D typescript tsc ts-node-dev @types/express @types/node @types/cors
 tsc --init
-npm run dev
+npm run dev --to run server
 npm i mongoose
 npm i multer cloudinary
 npm i multer -D @types/multer
 
+
+//In frontend
+configure next js app by following https://tailwindcss.com/docs/guides/nextjs
+exactly follow the steps.
+npm i styled-components
+npm i use-dark-mode
+npm add next-themes
+npm add react-switch react-icons
+npm install --save react-dropzone
 
 

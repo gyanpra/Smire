@@ -1,0 +1,155 @@
+body {
+  background-color: rgb(223, 174, 16);
+}
+
+.position {
+  width: 100px;
+  height: 100px;
+  transition: 2s;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  position: absolute;
+  right: calc(100% - 100px);
+}
+
+.position:hover {
+  right: 0;
+}
+
+.ripple1 {
+  width: 50px;
+  height: 50px;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  box-shadow: 8px 8px 10px #00000030, -8px -8px 10px #ffffff,
+    inset 8px 8px 10px #00000030, inset -8px -8px 10px #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 6.5s infinite ease-in-out;
+}
+
+.ripple2 {
+  width: 50px;
+  height: 50px;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  box-shadow: 8px 8px 10px #00000030, -8px -8px 10px #ffffff,
+    inset 8px 8px 10px #00000030, inset -8px -8px 10px #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 4.5s 1.5s infinite ease-in-out;
+}
+
+.ripple3 {
+  width: 50px;
+  height: 50px;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  box-shadow: 8px 8px 10px #00000030, -8px -8px 10px #ffffff,
+    inset 8px 8px 10px #00000030, inset -8px -8px 10px #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 4.5s 3s infinite ease-in-out;
+}
+
+@keyframes ripple {
+  0%,
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+:root {
+  --number-of-characters: 20;
+}
+h1 {
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+  font-size: 34px;
+  font-family: "Yellowtail", cursive;
+  text-decoration: underline;
+}
+h1::before,
+h1::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+h1::before {
+  background: rgb(223, 174, 16);
+  opacity: 1;
+  -webkit-animation: typewriter 4s steps(var(--number-of-characters)) 2s
+    forwards;
+  animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards;
+}
+h1::after {
+  width: 3px;
+  background: black;
+  -webkit-animation: typewriter 4s steps(var(--number-of-characters)) 2s
+      forwards,
+    blink 1.3s steps(var(--number-of-characters)) infinite;
+  animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards,
+    blink 1.3s steps(var(--number-of-characters)) infinite;
+}
+@-webkit-keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    background: black;
+  }
+  49% {
+    background: black;
+  }
+  50% {
+    background: transparent;
+  }
+  100% {
+    background: transparent;
+  }
+}
+@keyframes blink {
+  0% {
+    background: rgb(223, 174, 16);
+  }
+  49% {
+    background: rgb(223, 174, 16);
+  }
+  50% {
+    background: transparent;
+  }
+  100% {
+    background: transparent;
+  }
+}
+
+body {
+  overflow-y: hidden;
+}
