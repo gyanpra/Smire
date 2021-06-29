@@ -152,4 +152,5 @@ h1::after {
 
 body {
   overflow-y: hidden;
+  overflow-x: hidden;
 }

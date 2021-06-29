@@ -64,7 +64,7 @@ export default function Home() {
 
           {!downloadPageLink && file && (
             <button
-              className="p-2 my-5 bg-gray-900 rounded-md w-44 focus:outline-none "
+              className="button bg-red-600 p-1 my-3 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-90"
               onClick={handleUpload}
             >
               {uploadState}
@@ -76,7 +76,7 @@ export default function Home() {
               <Download downloadPageLink={downloadPageLink} />
               <EmailForm id={id} />
               <button
-                className="button p-1 my-3 transition duration-500 ease-in-out  bg-gray-900 rounded-md w-30 focus:outline-none hover:bg-red-600 transform hover:-translate-y-1 hover:scale-90 hover:shadow-lg hover:border-transparent rounded-xl"
+                className="p-1 my-3 transition duration-500 ease-in-out  bg-gray-900 rounded-md w-30 focus:outline-none hover:bg-red-600 transform hover:-translate-y-1 hover:scale-90 hover:shadow-lg hover:border-transparent rounded-xl"
                 onClick={resetComponent}
               >
                 Upload New File

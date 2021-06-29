@@ -8,6 +8,8 @@ npm run dev --to run server
 npm i mongoose
 npm i multer cloudinary
 npm i multer -D @types/multer
+npm i nodemailer
+npm i -D @types/nodemailer
 
 
 //In frontend
@@ -18,5 +20,18 @@ npm i use-dark-mode
 npm add next-themes
 npm add react-switch react-icons
 npm install --save react-dropzone
+
+
+//configure
+cloudinary, sendinblue, 
+mongodb,(online )
+node,
+express,
+react,
+
+
+Setup PWA and service worker
+check in lighthouse, throughput, performance and all other parameters and move closer to 100 performance.
+// ctrl+shift+r for hard reloading
 
 

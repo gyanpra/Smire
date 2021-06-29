@@ -51,13 +51,17 @@ const EmailForm: FunctionComponent<{
           value={emailTo}
         />
         <button
-          className="button p-2 my-5 bg-gray-900 rounded-md w-44 focus:outline-none"
+          className="p-2 my-5 bg-gray-900 rounded-md w-44 focus:outline-none transition duration-500 ease-out-in  bg-gray-900 rounded-md w-30 focus:outline-none hover:bg-red-600 transform hover:-translate-y-1 hover:scale-90 hover:shadow-lg hover:border-transparent rounded-xl"
           type="submit"
         >
           Email
         </button>
       </form>
-      {message && <p className="font-medium text-red-500">{message}</p>}
+      {message && (
+        <p className="font-large italic no-underline hover:underline">
+          {message}
+        </p>
+      )}
     </div>
   );
 };
