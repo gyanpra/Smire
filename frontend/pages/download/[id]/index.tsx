@@ -3,16 +3,14 @@ import axios from "axios";
 import { IFile } from "../../../library/types";
 import { GetServerSidePropsContext, NextPage } from "next";
 import fileDownload from "js-file-download";
+
 const index: NextPage<{
   file: IFile;
 }> = ({ file: { format, name, sizeInBytes, id } }) => {
   const handleDownload = async () => {
-    const { data } = await axios.get(
-      `http://localhost:8000/api/files/${id}/download`,
-      {
-        responseType: "blob",
-      }
-    );
+    const { data } = await axios.get(`api/files/${id}/download`, {
+      responseType: "blob",
+    });
     fileDownload(data, name);
   };
 
@@ -59,7 +57,9 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   const { id } = context.query;
   let file;
   try {
-    const { data } = await axios.get(`http://localhost:8000/api/files/${id}`);
+    const { data } = await axios.get(
+      `${process.env.API_BASE_ENDPOINT}api/files/${id}`
+    );
     file = data;
   } catch (error) {
     console.log(error.response.data);

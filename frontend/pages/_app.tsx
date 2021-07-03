@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import "./beststyle.css";
 import Animations from "../components/Animations";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:8000/";
+axios.defaults.baseURL = "process.env.NEXT_PUBLIC_API_BASE_ENDPOINT";
 
 function MyApp({ Component, pageProps }) {
   return (
